@@ -44,7 +44,7 @@ function Projects({ isDarkMode }) {
       title: "Helpcom",
       description: "Helpcom visa auxiliar pequenos empresários do setor de confeitaria, ajudando com precificação, controle de estoque e oferecendo uma solução acessível comparada a outros programas.",
       image: "/images/project/helpcom.png",
-      technologies: ["Java", "MySQL", "Desktop"],
+      technologies: ["Java", "PostgreSQL", "Desktop"],
       repository: "https://github.com/nathanmartinss/helpcom",
       website: null,
       featured: false,
@@ -124,13 +124,14 @@ function Projects({ isDarkMode }) {
           <div className="project-image">
             <img
               src={project.image}
-              alt={project.title}
+              alt={`Screenshot do projeto ${project.title}`}
               onError={(e) => {
                 const bgColor = isDarkMode ? '%231e2122' : '%23f3f4f6';
                 const textColor = isDarkMode ? '%239ca3af' : '%236b7280';
-                e.target.src = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='${bgColor}'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='system-ui' font-size='14' fill='${textColor}'%3E${project.title}%3C/text%3E%3C/svg%3E`;
+                e.target.src = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='${bgColor}'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter' font-size='16' fill='${textColor}'%3E${project.title}%3C/text%3E%3C/svg%3E`;
                 e.target.style.objectFit = 'contain';
               }}
+              loading="lazy"
             />
           </div>
         )}
@@ -191,53 +192,53 @@ function Projects({ isDarkMode }) {
   };
 
   return (
-    <main className="main-content">
-      <div className="content-wrapper">
-        <section className="projects-section">
+    <main className="projects-container">
+      <div className="projects-content">
+        <section className="projects-header">
           <h1 className="section-title">Meus Projetos</h1>
           <p className="section-description">
             Aqui estão alguns dos projetos que desenvolvi durante minha jornada acadêmica e profissional.
             Cada projeto representa diferentes desafios técnicos e oportunidades de aprendizado,
             abrangendo desde aplicações web até sistemas desktop e soluções de impacto social.
           </p>
-
-          {/* Projetos em Destaque */}
-          {featuredProjects.length > 0 && (
-            <div className="projects-section-featured">
-              <h2 className="subsection-title">Projetos em Destaque</h2>
-              <div className="projects-grid featured">
-                {featuredProjects.map(project => (
-                  <ProjectCard key={project.id} project={project} variant="full" />
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Outros Projetos */}
-          {otherProjects.length > 0 && (
-            <div className="projects-section-others">
-              <h2 className="subsection-title">Outros Projetos</h2>
-              <div className="projects-grid others">
-                {otherProjects.map(project => (
-                  <ProjectCard key={project.id} project={project} variant="compact" />
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Link para GitHub */}
-          <div className="projects-footer">
-            <a
-              href="https://github.com/nathanmartinss"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="github-link"
-            >
-              <span>Ver mais projetos no GitHub</span>
-              <span className="icon">↗</span>
-            </a>
-          </div>
         </section>
+
+        {/* Projetos em Destaque */}
+        {featuredProjects.length > 0 && (
+          <div className="projects-section-featured">
+            <h2 className="subsection-title">Projetos em Destaque</h2>
+            <div className="projects-grid featured">
+              {featuredProjects.map(project => (
+                <ProjectCard key={project.id} project={project} variant="full" />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Outros Projetos */}
+        {otherProjects.length > 0 && (
+          <div className="projects-section-others">
+            <h2 className="subsection-title">Outros Projetos</h2>
+            <div className="projects-grid others">
+              {otherProjects.map(project => (
+                <ProjectCard key={project.id} project={project} variant="compact" />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Link para GitHub */}
+        <div className="projects-footer">
+          <a
+            href="https://github.com/nathanmartinss"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="github-link"
+          >
+            <span>Ver mais projetos no GitHub</span>
+            <span className="icon">↗</span>
+          </a>
+        </div>
       </div>
     </main>
   );
