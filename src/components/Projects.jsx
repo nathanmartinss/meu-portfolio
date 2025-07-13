@@ -21,7 +21,7 @@ function Projects({ isDarkMode }) {
       id: 1,
       title: "TechTree",
       description: "TechTree é uma empresa de tecnologia que oferece cursos focados na área de tecnologia, onde os usuários podem acompanhar seu progresso e ser recompensados visualmente por isso.",
-      image: "/images/project/techtree.png",
+      image: "/images/project/techtree.jpg",
       technologies: ["React", "Node.js", "Java", "MySQL"],
       repository: "https://github.com/ronaldothame/techtree-backend",
       website: null,
