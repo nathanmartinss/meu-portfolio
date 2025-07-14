@@ -68,7 +68,7 @@
 
 @media (max-width: 768px) {
   .projects-content {
-    padding: 4rem 0 3rem 0;
+    padding: 7rem 0 3rem 0;
     gap: 2rem;
   }
 
@@ -355,7 +355,7 @@
 /* Responsividade extra para dispositivos muito pequenos */
 @media (max-width: 480px) {
   .projects-content {
-    padding: 3rem 0 2rem 0;
+    padding: 7rem 0 2rem 0;
     gap: 2rem;
   }
 
