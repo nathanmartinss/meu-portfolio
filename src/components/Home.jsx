@@ -18,6 +18,19 @@ import {
 import { FaJava } from 'react-icons/fa';
 
 function Home({ isDarkMode }) {
+  const calculateAge = () => {
+    const birthDate = new Date(1999, 0, 14);
+    const today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+    }
+
+    return age;
+  };
+
   const technologies = [
     { name: 'Javascript', icon: SiJavascript, url: 'https://www.javascript.com/', color: '#f7df1e' },
     { name: 'Typescript', icon: SiTypescript, url: 'https://www.typescriptlang.org/', color: '#3178c6' },
@@ -76,7 +89,7 @@ function Home({ isDarkMode }) {
 
           <div className="intro-text">
             <p>
-              Sou um programador entusiasmado em tecnologia, tenho atualmente 26 anos e trabalho
+              Sou um programador entusiasmado em tecnologia, tenho atualmente {calculateAge()} anos e trabalho
               como <strong>Analista de Sistema Júnior</strong> pela empresa Nexamed. Sou formado em Análise e
               Desenvolvimento de Sistemas pelo Centro Universitário FACENS.
             </p>
