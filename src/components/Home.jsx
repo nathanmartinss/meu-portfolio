@@ -34,7 +34,7 @@ function Home({ isDarkMode }) {
       icon: FaGithub,
       url: 'https://github.com/nathanmartinss',
       description: 'Meus experimentos (aka projetos)',
-      color: isDarkMode ? '#f0f6fc' : '#24292f'
+      color: isDarkMode ? '#24292f' : '#24292f'
     },
     {
       name: 'LinkedIn',
@@ -105,9 +105,8 @@ function Home({ isDarkMode }) {
           </div>
         </section>
 
-        {/* Primeira linha de cards */}
-        <section className="main-cards-row">
-          {/* Card de Stack de Tecnologias */}
+        {/* Stack Principal - apenas no topo */}
+        <section className="top-section">
           <div className="tech-stack-card">
             <h3 className="tech-title">Stack Principal</h3>
             <div className="tech-grid">
@@ -129,26 +128,10 @@ function Home({ isDarkMode }) {
               })}
             </div>
           </div>
-
-          {/* Card de Navegação Rápida */}
-          <div className="quick-nav-card">
-            <h3 className="nav-title">Explore</h3>
-            <div className="nav-links">
-              <Link to="/about" className="nav-link">
-                <span>Sobre mim</span>
-                <span className="nav-arrow">→</span>
-              </Link>
-              <Link to="/projects" className="nav-link">
-                <span>Meus projetos</span>
-                <span className="nav-arrow">→</span>
-              </Link>
-            </div>
-          </div>
         </section>
 
-        {/* Segunda linha de cards */}
-        <section className="secondary-cards-row">
-          {/* Card de Redes Sociais */}
+        {/* Conecte-se comigo e CV */}
+        <section className="social-cv-section">
           <div className="social-cards-container">
             <h3 className="section-title">Conecte-se comigo</h3>
             <div className="social-cards">
@@ -176,7 +159,6 @@ function Home({ isDarkMode }) {
             </div>
           </div>
 
-          {/* Card de Downloads de CV */}
           <div className="cv-section">
             <h3 className="cv-title">Currículo</h3>
             <div className="cv-buttons">
