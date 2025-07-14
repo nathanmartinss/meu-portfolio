@@ -11,7 +11,8 @@ import {
   SiCss3,
   SiDocker,
   SiNestjs,
-  SiPostgresql
+  SiPostgresql,
+  SiFigma
 } from 'react-icons/si';
 import { MdDesktopWindows, MdApi, MdMap } from 'react-icons/md';
 import { FaJava } from 'react-icons/fa';
@@ -53,17 +54,6 @@ function Projects({ isDarkMode }) {
     },
     {
       id: 4,
-      title: "Themis Penna",
-      description: "Nosso projeto é um fórum especializado em fornecer suporte para mulheres vítimas de violência doméstica. Nosso objetivo é reunir outras mulheres que passaram por violência psicológica e/ou física para ajudar aquelas que estão passando por isso atualmente.",
-      image: "/images/project/themis.png",
-      technologies: ["React", "Node.js", "MongoDB"],
-      repository: "https://github.com/ronaldothame/ThemisPenna",
-      website: null,
-      featured: false,
-      tags: ["Social Impact", "Forum", "Suporte"]
-    },
-    {
-      id: 5,
       title: "Accident Track",
       description: "Accident Track foi desenvolvido para ajudar os usuários a relatar, rastrear e visualizar incidentes como incêndios florestais, inundações e outros desastres naturais.",
       image: "/images/project/accidenttrack.png",
@@ -74,7 +64,7 @@ function Projects({ isDarkMode }) {
       tags: ["Emergência", "Tracking", "Desastres"]
     },
     {
-      id: 6,
+      id: 5,
       title: "Backend Coderhouse",
       description: "Projeto backend desenvolvido durante o curso Coderhouse, focado em APIs RESTful, autenticação, middleware e boas práticas de desenvolvimento backend com Node.js.",
       image: "/images/project/backend-coderhouse.png",
@@ -109,6 +99,7 @@ function Projects({ isDarkMode }) {
       'CSS': <SiCss3 style={{ ...iconStyle, color: isDarkMode ? '#5dade2' : '#1572b6' }} />,
       'Docker': <SiDocker style={{ ...iconStyle, color: isDarkMode ? '#5dade2' : '#2496ed' }} />,
       'Nest.js': <SiNestjs style={{ ...iconStyle, color: isDarkMode ? '#ff6b9d' : '#e0234e' }} />,
+      'Figma': <SiFigma style={{ ...iconStyle, color: isDarkMode ? '#ff6b6b' : '#f24e1e' }} />,
       'Desktop': <MdDesktopWindows style={iconStyle} />,
       'API': <MdApi style={iconStyle} />,
       'Maps': <MdMap style={iconStyle} />
