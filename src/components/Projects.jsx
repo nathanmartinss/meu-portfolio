@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/Projects.css';
-// Importar ícones das tecnologias
 import {
   SiReact,
   SiNodedotjs,
@@ -76,7 +75,6 @@ function Projects({ isDarkMode }) {
     }
   ];
 
-  // Separar projetos em categorias
   const featuredProjects = projects.filter(project => project.featured);
   const otherProjects = projects.filter(project => !project.featured);
 
