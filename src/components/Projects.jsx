@@ -10,7 +10,8 @@ import {
   SiMongodb,
   SiCss3,
   SiDocker,
-  SiNestjs
+  SiNestjs,
+  SiPostgresql
 } from 'react-icons/si';
 import { MdDesktopWindows, MdApi, MdMap } from 'react-icons/md';
 import { FaJava } from 'react-icons/fa';
@@ -22,7 +23,7 @@ function Projects({ isDarkMode }) {
       title: "TechTree",
       description: "TechTree é uma empresa de tecnologia que oferece cursos focados na área de tecnologia, onde os usuários podem acompanhar seu progresso e ser recompensados visualmente por isso.",
       image: "/images/project/techtree.jpg",
-      technologies: ["React", "Node.js", "Java", "MySQL"],
+      technologies: ["React", "Node.js", "Java", "PostgreSQL"],
       repository: "https://github.com/ronaldothame/techtree-backend",
       website: null,
       featured: true,
@@ -104,6 +105,7 @@ function Projects({ isDarkMode }) {
       'Java': <FaJava style={{ ...iconStyle, color: isDarkMode ? '#f89500' : '#ed8b00' }} />,
       'MySQL': <SiMysql style={{ ...iconStyle, color: isDarkMode ? '#6ba3d6' : '#4479a1' }} />,
       'MongoDB': <SiMongodb style={{ ...iconStyle, color: isDarkMode ? '#6ab04c' : '#47a248' }} />,
+      'PostgreSQL': <SiPostgresql style={{ ...iconStyle, color: isDarkMode ? '#5dade2' : '#336791' }} />,
       'CSS': <SiCss3 style={{ ...iconStyle, color: isDarkMode ? '#5dade2' : '#1572b6' }} />,
       'Docker': <SiDocker style={{ ...iconStyle, color: isDarkMode ? '#5dade2' : '#2496ed' }} />,
       'Nest.js': <SiNestjs style={{ ...iconStyle, color: isDarkMode ? '#ff6b9d' : '#e0234e' }} />,
