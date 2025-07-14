@@ -160,7 +160,7 @@ function Home({ isDarkMode }) {
           </div>
 
           <div className="cv-section">
-            <h3 className="cv-title">Currículo</h3>
+            <h3 className="cv-title">Download CV</h3>
             <div className="cv-buttons">
               <a
                 href="/assets/cv-nathan-portugues.pdf"
@@ -168,7 +168,7 @@ function Home({ isDarkMode }) {
                 className="cv-button primary"
               >
                 <FaDownload />
-                <span>Download CV (BR)</span>
+                <span>CV (BR)</span>
               </a>
               <a
                 href="/assets/cv-nathan-english.pdf"
@@ -176,7 +176,7 @@ function Home({ isDarkMode }) {
                 className="cv-button secondary"
               >
                 <FaDownload />
-                <span>Download CV (EN)</span>
+                <span>CV (EN)</span>
               </a>
             </div>
           </div>

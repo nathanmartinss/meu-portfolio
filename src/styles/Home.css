@@ -232,6 +232,7 @@
   grid-template-columns: 2fr 1fr;
   gap: 2rem;
   margin-bottom: 1rem;
+  align-items: stretch;
 }
 
 /* Navegação - Baixo */
@@ -470,6 +471,11 @@
   text-align: center;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .cv-section:hover {
@@ -483,6 +489,7 @@
   font-weight: 600;
   color: var(--text-primary);
   font-family: 'Inter', sans-serif;
+  text-align: center;
 }
 
 .cv-buttons {
@@ -491,6 +498,7 @@
   gap: 1rem;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .cv-button {
@@ -503,7 +511,7 @@
   font-weight: 500;
   transition: all 0.3s ease;
   width: 100%;
-  max-width: 200px;
+  max-width: 180px;
   justify-content: center;
   font-size: 0.9rem;
   font-family: 'Inter', sans-serif;
