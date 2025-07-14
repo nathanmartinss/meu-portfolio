@@ -8,7 +8,7 @@ Um portfólio moderno e responsivo desenvolvido em React, apresentando minha jor
 
 ## 🌟 Demonstração
 
-**Deploy:** [nathanmartins.dev](https://nathanm.br)
+**Deploy:** [nathanm.com.br](https://nathanm.br)
 
 ## 📋 Índice
 
@@ -271,6 +271,10 @@ Remove a dependência única de build tool do projeto.
 - **GitHub**: [@nathanmartinss](https://github.com/nathanmartinss)
 - **LinkedIn**: [nathanmartinss](https://linkedin.com/in/nathanmartinss)
 - **Email**: nathanmartinss@icloud.com
+
+## 🌟 Inspiração
+
+**Mateusf:** [v9.mateusf.com](https://v9.mateusf.com)
 
 ---
 
