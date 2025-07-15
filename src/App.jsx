@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { LanguageProvider } from './contexts/LanguageContext';
 import GlobalStyles from './styles/GlobalStyles';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import Home from './components/Home';
 import About from './components/About';
 import Projects from './components/Projects';
@@ -41,11 +42,14 @@ function AppContent() {
         toggleTheme={toggleTheme}
         currentPage={getCurrentPage()}
       />
-      <Routes>
-        <Route path="/" element={<Home isDarkMode={isDarkMode} />} />
-        <Route path="/about" element={<About isDarkMode={isDarkMode} />} />
-        <Route path="/projects" element={<Projects isDarkMode={isDarkMode} />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home isDarkMode={isDarkMode} />} />
+          <Route path="/about" element={<About isDarkMode={isDarkMode} />} />
+          <Route path="/projects" element={<Projects isDarkMode={isDarkMode} />} />
+        </Routes>
+      </main>
+      <Footer />
     </div>
   );
 }

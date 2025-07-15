@@ -133,6 +133,14 @@ export const translations = {
         api: 'API',
         nodejs: 'Node.js'
       }
+    },
+
+    // Footer
+    footer: {
+      quickLinks: 'Links Rápidos',
+      connect: 'Conecte-se',
+      copyright: 'Desenvolvido com ❤️ por',
+      tech: 'Feito com React.js & CSS'
     }
   },
 
@@ -270,6 +278,14 @@ export const translations = {
         api: 'API',
         nodejs: 'Node.js'
       }
+    },
+
+    // Footer
+    footer: {
+      quickLinks: 'Quick Links',
+      connect: 'Connect',
+      copyright: 'Developed with ❤️ by',
+      tech: 'Made with React.js & CSS'
     }
   }
 };

@@ -19,7 +19,14 @@ const GlobalStyles = createGlobalStyle`
 
   .app {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     transition: all 0.3s ease;
+  }
+
+  main {
+    flex: 1;
+    padding-top: 80px; /* Para compensar o header fixo */
   }
 
   /* Tema Dark */
@@ -28,10 +35,30 @@ const GlobalStyles = createGlobalStyle`
     color: #e4e4e7;
   }
 
+  .app.dark,
+  .app.dark * {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #1a1a1a;
+    --text-primary: #f7fafc;
+    --text-secondary: #a0aec0;
+    --accent: #8b5cf6;
+    --border: #2d3748;
+  }
+
   /* Tema Light */
   .app.light {
     background-color: #ffffff;
     color: #18181b;
+  }
+
+  .app.light,
+  .app.light * {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --accent: #8b5cf6;
+    --border: #e5e7eb;
   }
 
   /* Header */
