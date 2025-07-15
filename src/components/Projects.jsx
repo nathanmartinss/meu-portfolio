@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/Projects.css';
+import { useTranslation } from '../hooks/useTranslation';
 import {
   SiReact,
   SiNodedotjs,
@@ -17,61 +18,63 @@ import { MdDesktopWindows, MdApi, MdMap } from 'react-icons/md';
 import { FaJava } from 'react-icons/fa';
 
 function Projects({ isDarkMode }) {
+  const { t } = useTranslation();
+
   const projects = [
     {
       id: 1,
       title: "TechTree",
-      description: "TechTree é uma empresa de tecnologia que oferece cursos focados na área de tecnologia, onde os usuários podem acompanhar seu progresso e ser recompensados visualmente por isso.",
+      description: t('projects.projectDescriptions.techtree'),
       image: "/images/project/techtree.jpg",
       technologies: ["React", "Node.js", "Java", "PostgreSQL"],
       repository: "https://github.com/ronaldothame/techtree-backend",
       website: null,
       featured: true,
-      tags: ["Full Stack", "Educação", "Progresso Visual"]
+      tags: [t('projects.tags.fullstack'), t('projects.tags.education'), t('projects.tags.visualprogress')]
     },
     {
       id: 2,
       title: "Games Galaxy",
-      description: "Games Galaxy é um projeto desenvolvido como parte do curso Coderhouse. Este projeto é uma plataforma de e-commerce focada em produtos de jogos, desenvolvida inteiramente em React.",
+      description: t('projects.projectDescriptions.gamesgalaxy'),
       image: "/images/project/gamesgalaxy.png",
       technologies: ["React", "JavaScript", "CSS"],
       repository: "https://github.com/nathanmartinss/gamesGalaxy",
       website: "https://games-galaxy.vercel.app",
       featured: true,
-      tags: ["E-commerce", "React", "Gaming"]
+      tags: [t('projects.tags.ecommerce'), t('projects.tags.react'), t('projects.tags.gaming')]
     },
     {
       id: 3,
       title: "Helpcom",
-      description: "Helpcom visa auxiliar pequenos empresários do setor de confeitaria, ajudando com precificação, controle de estoque e oferecendo uma solução acessível comparada a outros programas.",
+      description: t('projects.projectDescriptions.helpcom'),
       image: "/images/project/helpcom.png",
       technologies: ["Java", "PostgreSQL", "Desktop"],
       repository: "https://github.com/nathanmartinss/helpcom",
       website: null,
       featured: false,
-      tags: ["Desktop App", "Gestão", "Confeitaria"]
+      tags: [t('projects.tags.desktop'), t('projects.tags.management'), t('projects.tags.bakery')]
     },
     {
       id: 4,
       title: "Accident Track",
-      description: "Accident Track foi desenvolvido para ajudar os usuários a relatar, rastrear e visualizar incidentes como incêndios florestais, inundações e outros desastres naturais.",
+      description: t('projects.projectDescriptions.accidenttrack'),
       image: "/images/project/accidenttrack.png",
       technologies: ["JavaScript", "API", "Maps"],
       repository: "https://github.com/nathanmartinss/Accident-Track",
       website: null,
       featured: false,
-      tags: ["Emergência", "Tracking", "Desastres"]
+      tags: [t('projects.tags.emergency'), t('projects.tags.tracking'), t('projects.tags.disasters')]
     },
     {
       id: 5,
       title: "Backend Coderhouse",
-      description: "Projeto backend desenvolvido durante o curso Coderhouse, focado em APIs RESTful, autenticação, middleware e boas práticas de desenvolvimento backend com Node.js.",
+      description: t('projects.projectDescriptions.backendcoderhouse'),
       image: "/images/project/backend-coderhouse.png",
       technologies: ["Node.js", "JavaScript", "API"],
       repository: "https://github.com/nathanmartinss/backendCoderhouse",
       website: null,
       featured: false,
-      tags: ["Backend", "API", "Node.js"]
+      tags: [t('projects.tags.backend'), t('projects.tags.api'), t('projects.tags.nodejs')]
     }
   ];
 
@@ -161,7 +164,7 @@ function Projects({ isDarkMode }) {
                 rel="noopener noreferrer"
                 className="btn btn-source"
               >
-                <span>Repositório</span>
+                <span>{t('projects.repository')}</span>
                 <span className="icon">📦</span>
               </a>
             )}
@@ -172,7 +175,7 @@ function Projects({ isDarkMode }) {
                 rel="noopener noreferrer"
                 className="btn btn-website"
               >
-                <span>Website</span>
+                <span>{t('projects.website')}</span>
                 <span className="icon">🌐</span>
               </a>
             )}
@@ -186,18 +189,16 @@ function Projects({ isDarkMode }) {
     <main className="projects-container">
       <div className="projects-content">
         <section className="projects-header">
-          <h1 className="section-title">Meus Projetos</h1>
+          <h1 className="section-title">{t('projects.title')}</h1>
           <p className="section-description">
-            Aqui estão alguns dos projetos que desenvolvi durante minha jornada acadêmica e profissional.
-            Cada projeto representa diferentes desafios técnicos e oportunidades de aprendizado,
-            abrangendo desde aplicações web até sistemas desktop e soluções de impacto social.
+            {t('projects.description')}
           </p>
         </section>
 
         {/* Projetos em Destaque */}
         {featuredProjects.length > 0 && (
           <div className="projects-section-featured">
-            <h2 className="subsection-title">Projetos em Destaque</h2>
+            <h2 className="subsection-title">{t('projects.featured')}</h2>
             <div className="projects-grid featured">
               {featuredProjects.map(project => (
                 <ProjectCard key={project.id} project={project} variant="full" />
@@ -209,7 +210,7 @@ function Projects({ isDarkMode }) {
         {/* Outros Projetos */}
         {otherProjects.length > 0 && (
           <div className="projects-section-others">
-            <h2 className="subsection-title">Outros Projetos</h2>
+            <h2 className="subsection-title">{t('projects.others')}</h2>
             <div className="projects-grid others">
               {otherProjects.map(project => (
                 <ProjectCard key={project.id} project={project} variant="compact" />
@@ -226,7 +227,7 @@ function Projects({ isDarkMode }) {
             rel="noopener noreferrer"
             className="github-link"
           >
-            <span>Ver mais projetos no GitHub</span>
+            <span>{t('projects.viewMore')}</span>
             <span className="icon">↗</span>
           </a>
         </div>

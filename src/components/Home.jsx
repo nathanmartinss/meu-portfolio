@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import '../styles/Home.css';
+import { useTranslation } from '../hooks/useTranslation';
 import {
   FaGithub,
   FaLinkedin,
@@ -18,6 +18,8 @@ import {
 import { FaJava } from 'react-icons/fa';
 
 function Home({ isDarkMode }) {
+  const { t } = useTranslation();
+  
   const calculateAge = () => {
     const birthDate = new Date(1999, 0, 14);
     const today = new Date();
@@ -46,21 +48,21 @@ function Home({ isDarkMode }) {
       name: 'GitHub',
       icon: FaGithub,
       url: 'https://github.com/nathanmartinss',
-      description: 'Meus experimentos (aka projetos)',
+      description: t('home.social.github'),
       color: isDarkMode ? '#24292f' : '#24292f'
     },
     {
       name: 'LinkedIn',
       icon: FaLinkedin,
       url: 'https://linkedin.com/in/nathanmartinss',
-      description: 'Vida profissional',
+      description: t('home.social.linkedin'),
       color: '#0a66c2'
     },
     {
       name: 'Email',
       icon: FaEnvelope,
       url: 'mailto:nathanmartinss@icloud.com',
-      description: 'Vamos conversar',
+      description: t('home.social.email'),
       color: isDarkMode ? '#8b5cf6' : '#7c3aed'
     }
   ];
@@ -79,22 +81,20 @@ function Home({ isDarkMode }) {
             </div>
             <div className="profile-info">
               <h1 className="main-title">
-                <span className="wave">👋</span> Olá, sou Nathan
+                <span className="wave">👋</span> {t('home.about.greeting')}
               </h1>
               <div className="status">
-                <span className="status-text">Desenvolvedor Full-Stack </span>
+                <span className="status-text">{t('home.about.status')} </span>
               </div>
             </div>
           </div>
 
           <div className="intro-text">
             <p>
-              Sou um programador entusiasmado em tecnologia, tenho atualmente {calculateAge()} anos e trabalho
-              como <strong>Analista de Sistema Júnior</strong> pela empresa Nexamed. Sou formado em Análise e
-              Desenvolvimento de Sistemas pelo Centro Universitário FACENS.
+              {t('home.about.intro1')} {calculateAge()} {t('home.about.intro2')}
             </p>
             <p>
-              Trabalho principalmente com tecnologias como{' '}
+              {t('home.about.techWork')}{' '}
               {technologies.map((tech, index) => {
                 const Icon = tech.icon;
                 return (
@@ -109,11 +109,11 @@ function Home({ isDarkMode }) {
                       <Icon className="tech-icon-inline" />
                       {tech.name}
                     </a>
-                    {index < technologies.length - 1 && (index === technologies.length - 2 ? ' e ' : ', ')}
+                    {index < technologies.length - 1 && (index === technologies.length - 2 ? ` ${t('home.about.techAnd')} ` : ', ')}
                   </span>
                 );
               })}
-              {' '}no meu dia a dia.
+              {' '}{t('home.about.techDayToDay')}
             </p>
           </div>
         </section>
@@ -121,7 +121,7 @@ function Home({ isDarkMode }) {
         {/* Stack Principal - apenas no topo */}
         <section className="top-section">
           <div className="tech-stack-card">
-            <h3 className="tech-title">Stack Principal</h3>
+            <h3 className="tech-title">{t('home.about.stackTitle')}</h3>
             <div className="tech-grid">
               {technologies.map((tech) => {
                 const Icon = tech.icon;
@@ -146,7 +146,7 @@ function Home({ isDarkMode }) {
         {/* Conecte-se comigo e CV */}
         <section className="social-cv-section">
           <div className="social-cards-container">
-            <h3 className="section-title">Conecte-se comigo</h3>
+            <h3 className="section-title">{t('home.about.connectTitle')}</h3>
             <div className="social-cards">
               {socialLinks.map((social) => {
                 const Icon = social.icon;
@@ -173,7 +173,7 @@ function Home({ isDarkMode }) {
           </div>
 
           <div className="cv-section">
-            <h3 className="cv-title">Download CV</h3>
+            <h3 className="cv-title">{t('home.about.cvTitle')}</h3>
             <div className="cv-buttons">
               <a
                 href="/assets/cv-nathan-portugues.pdf"

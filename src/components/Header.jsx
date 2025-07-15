@@ -1,13 +1,17 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useLanguage } from '../contexts/LanguageContext';
+import { useTranslation } from '../hooks/useTranslation';
 
 function Header({ isDarkMode, toggleTheme, currentPage }) {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const { language, toggleLanguage } = useLanguage();
+  const { t } = useTranslation();
 
   const menuItems = [
-    { id: 'home', label: 'Home', href: '/' },
-    { id: 'about', label: 'Sobre', href: '/about' },
-    { id: 'projects', label: 'Projetos', href: '/projects' },
+    { id: 'home', label: t('nav.home'), href: '/' },
+    { id: 'about', label: t('nav.about'), href: '/about' },
+    { id: 'projects', label: t('nav.projects'), href: '/projects' },
   ];
 
   return (
@@ -34,6 +38,16 @@ function Header({ isDarkMode, toggleTheme, currentPage }) {
 
           {/* Botões de Ação */}
           <div className="action-buttons">
+            {/* Toggle Language */}
+            <button
+              className="language-toggle"
+              onClick={toggleLanguage}
+              aria-label="Toggle language"
+              title={language === 'pt' ? 'Switch to English' : 'Mudar para Português'}
+            >
+              {language === 'pt' ? '🇧🇷' : '🇺🇸'}
+            </button>
+
             {/* Toggle Dark Mode */}
             <button
               className="theme-toggle"

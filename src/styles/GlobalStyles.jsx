@@ -182,6 +182,41 @@ const GlobalStyles = createGlobalStyle`
     gap: 1rem;
   }
 
+  .language-toggle {
+    background: none;
+    border: 2px solid;
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 0.375rem 0.5rem;
+    border-radius: 0.375rem;
+    transition: all 0.2s ease;
+    min-width: 2.75rem;
+    height: 2.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .app.dark .language-toggle {
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #d1d5db;
+  }
+
+  .app.light .language-toggle {
+    border-color: rgba(0, 0, 0, 0.1);
+    color: #374151;
+  }
+
+  .app.dark .language-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .app.light .language-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.2);
+  }
+
   .theme-toggle {
     background: none;
     border: none;

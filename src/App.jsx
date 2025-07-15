@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { LanguageProvider } from './contexts/LanguageContext';
 import GlobalStyles from './styles/GlobalStyles';
 import Header from './components/Header';
 import Home from './components/Home';
@@ -54,7 +55,9 @@ function App() {
     <>
       <GlobalStyles />
       <Router>
-        <AppContent />
+        <LanguageProvider>
+          <AppContent />
+        </LanguageProvider>
       </Router>
     </>
   );
