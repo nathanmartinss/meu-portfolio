@@ -5,7 +5,8 @@ import {
   FaGithub,
   FaLinkedin,
   FaDownload,
-  FaEnvelope
+  FaEnvelope,
+  FaCertificate
 } from 'react-icons/fa';
 import {
   SiJavascript,
@@ -19,7 +20,7 @@ import { FaJava } from 'react-icons/fa';
 
 function Home({ isDarkMode }) {
   const { t } = useTranslation();
-  
+
   const calculateAge = () => {
     const birthDate = new Date(1999, 0, 14);
     const today = new Date();
@@ -190,6 +191,15 @@ function Home({ isDarkMode }) {
               >
                 <FaDownload />
                 <span>CV (EN)</span>
+              </a>
+              <a
+                href="https://drive.google.com/drive/folders/1Q5Y6hMEaNQoHdM11LaGdAAEFUeN6hFyD?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cv-button certificate"
+              >
+                <FaCertificate />
+                <span>{t('home.about.certificates')}</span>
               </a>
             </div>
           </div>

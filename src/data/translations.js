@@ -28,7 +28,8 @@ export const translations = {
         techAnd: 'e',
         stackTitle: 'Stack Principal',
         connectTitle: 'Conecte-se comigo',
-        cvTitle: 'Download CV'
+        cvTitle: 'CV e Certificações',
+        certificates: 'Certificados'
       },
       social: {
         github: 'Meus experimentos (aka projetos)',
@@ -173,7 +174,8 @@ export const translations = {
         techAnd: 'and',
         stackTitle: 'Main Stack',
         connectTitle: 'Connect with me',
-        cvTitle: 'Download CV'
+        cvTitle: 'CV & Certifications',
+        certificates: 'Certificates'
       },
       social: {
         github: 'My experiments (aka projects)',
