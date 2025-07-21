@@ -72,8 +72,8 @@ export const translations = {
         previous: {
           position: 'Auxiliar de Escritório',
           company: 'Assessoria Contábil Gouvêa',
-          period: 'Ago/2015 - Abril/2024',
-          duration: '8 anos e 8 meses',
+          period: 'Ago/2015 - Abril/2025',
+          duration: '9 anos e 8 meses',
           description: 'Auxiliar na contabilidade, emitindo e gerindo notas fiscais, SPED, DCTF, fechamento de ponto/folha, rescisões, e-Social e aberturas e alteração/encerramento de empresas.'
         }
       },
@@ -218,8 +218,8 @@ export const translations = {
         previous: {
           position: 'Office Assistant',
           company: 'Assessoria Contábil Gouvêa',
-          period: 'Aug/2015 - April/2024',
-          duration: '8 years and 8 months',
+          period: 'Aug/2015 - April/2025',
+          duration: '9 years and 8 months',
           description: 'Assist in accounting, issuing and managing invoices, SPED, DCTF, payroll closing, terminations, e-Social and company openings and changes/closures.'
         }
       },
