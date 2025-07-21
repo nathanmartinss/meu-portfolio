@@ -65,7 +65,7 @@ export const translations = {
         current: {
           position: 'Analista de Sistemas Júnior',
           company: 'Nexamed',
-          period: 'Maio/2024 - Presente',
+          period: 'Maio/2025 - Presente',
           duration: 'Atual',
           description: 'Atuo na modernização de sistemas, desenvolvendo e aprimorando funcionalidades existentes. Participo da correção de bugs, revisão de código e melhoria da documentação técnica, com foco em performance e manutenibilidade do software.'
         },
@@ -211,7 +211,7 @@ export const translations = {
         current: {
           position: 'Junior Systems Analyst',
           company: 'Nexamed',
-          period: 'May/2024 - Present',
+          period: 'May/2025 - Present',
           duration: 'Current',
           description: 'I work on system modernization, developing and improving existing functionalities. I participate in bug fixes, code review and technical documentation improvement, focusing on software performance and maintainability.'
         },
